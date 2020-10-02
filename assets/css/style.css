@@ -1,4 +1,11 @@
 /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/*
 html5doctor.com Reset Stylesheet
 v1.6.1
 Last Updated: 2010-09-17
@@ -175,6 +182,8 @@ select {
 /* MY CODE */
 
 * {
+  margin: 0;
+  padding: 0;
   text-decoration: none;
 }
 
@@ -188,6 +197,26 @@ p {
 
 main {
   padding-top: 100px;
+}
+
+.container {
+    width: 100%;
+    height: 500px;
+    background-color: #C0C0C0;
+
+    display: flex; /* Rearrange items in the container */
+    flex-wrap: wrap; /* Items pushed on to next row/column */
+    flex-direction: row; /* Items will go from left to right end of the line */
+    flex-flow: row wrap; /* Combines flex-direction & flex-wrap */
+    /* justify-content:  Define how much space horizontaly between items
+    justify-content: center;  Centers items with no space
+    justify-content: space-around;  Centers items with spacing but items furthest to the left and right have half spacing
+    justify-content: space-between;  Centers items with equal spacing only between items
+    justify-content: flex-end;  All items are pushed furthest to the right
+    justify-content: flex-start;
+    justify-content: space-evenly; All items are evenly spaced
+    */
+    justify-content: space-between;
 }
 
 /* HEADER */
@@ -216,6 +245,8 @@ header .head-brand {
 header nav ul {
   margin: 0 auto;
   display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -321,26 +352,32 @@ header .head-cases {
 }
 
 .index-boxlink1 {
+  -webkit-box-shadow: 2px 2px 8px #050505;
   box-shadow: 2px 2px 8px #050505;
   background-color: rgba(255, 235, 0, 0.75); /* #FFEB00 */
 }
 .index-boxlink2 {
+  -webkit-box-shadow: 2px 2px 8px #050505;
   box-shadow: 2px 2px 8px #050505;
   background-color: rgba(255, 100, 0, 0.75); /* #FF6400 */
 }
 .index-boxlink3 {
+  -webkit-box-shadow: 2px 2px 8px #050505;
   box-shadow: 2px 2px 8px #050505;
   background-color: rgba(110, 220, 0, 0.75); /* #6EDC00 */
 }
 .index-boxlink4 {
+  -webkit-box-shadow: 2px 2px 8px #050505;
   box-shadow: 2px 2px 8px #050505;
   background-color: rgba(255, 0, 64, 0.75); /* #FF0040 */
 }
 .index-boxlink5 {
+  -webkit-box-shadow: 2px 2px 8px #050505;
   box-shadow: 2px 2px 8px #050505;
   background-color: rgba(30, 144, 255, 0.75); /* #1E90FF */
 }
 .index-boxlink6 {
+  -webkit-box-shadow: 2px 2px 8px #050505;
   box-shadow: 2px 2px 8px #050505;
   background-color: rgba(194, 32, 169, 0.75); /* #C220A9 */
 }
@@ -379,7 +416,7 @@ header .head-cases {
   }
 
   .index-links div {
-    margin: 18px 8px 0;
+    margin: 16px 8px 0;
     height: 225px;
     float: left;
   }
@@ -402,6 +439,90 @@ header .head-cases {
   }
 }
 
+/* PROJECTS */
+
+.projects-links {
+  margin: 0 auto;
+  padding: 5px;
+  height: 490px;
+  width: 990px;
+  overflow: hidden;
+}
+
+main h2 {
+  font-family: Catamaran;
+  font-size: calc(30px + 1vw);
+  font-weight: 500;
+  line-height: calc(93px + 0.14vw);
+  color: #0f0f0f;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.projects-link {
+  float: left;
+  background-color: rgba(192, 192, 192, 0.75);
+  margin: 5px;
+  width: calc(25% - 10px) !important;
+  height: calc(50% - 10px) !important;
+}
+
+.projects-link p {
+  padding-top: 45%;
+  font-family: Catamaran;
+  font-size: calc(20px + 1vw);
+  font-weight: 500;
+  color: #0f0f0f;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* CASE */
+
+.case-vid h2 {
+  font-family: Catamaran;
+  font-size: calc(30px + 1vw);
+  font-weight: 500;
+  line-height: calc(93px + 0.14vw);
+  color: #0f0f0f;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.case-vid video {
+  display: block;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.case-vid article h3 {
+  font-family: Catamaran;
+  font-size: calc(30px + 1vw);
+  font-weight: 500;
+  line-height: calc(93px + 0.14vw);
+  color: #0f0f0f;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.case-vid article p {
+  font-family: Catamaran;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: calc(24px + 0.14vw);
+  color: #0f0f0f;
+  text-transform: uppercase;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+  padding: 30px 0;
+}
+
 /* FOOTER */
 
 footer {
@@ -412,6 +533,8 @@ footer {
 }
 
 footer ul {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   float: left;
   padding-left: 20px;
@@ -424,7 +547,7 @@ footer ul li {
 
 footer ul li a {
   font-family: Catamaran;
-  font-size: 24px;
+  font-size: 16px;
   color: #fff;
   line-height: 40px;
 }
@@ -455,9 +578,17 @@ footer ul li a {
 
   footer ul li p {
     font-family: Catamaran;
-    font-size: 24px;
+    font-size: 16px;
     color: #fff;
     line-height: 40px;
     text-transform: uppercase;
+  }
+  .footer-links-main {
+    border-right: 2px solid #fff;
+    padding-right: 20px;
+  }
+
+  .footer-links-projects {
+    margin-left: 20px;
   }
 }
