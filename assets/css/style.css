@@ -1,11 +1,4 @@
 /*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
-/*
 html5doctor.com Reset Stylesheet
 v1.6.1
 Last Updated: 2010-09-17
@@ -181,6 +174,13 @@ select {
 
 /* MY CODE */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -199,16 +199,117 @@ main {
   padding-top: 100px;
 }
 
-.container {
-    width: 100%;
-    height: 500px;
-    background-color: #C0C0C0;
+form {
+  width: 300px;
+}
 
-    display: flex; /* Rearrange items in the container */
-    flex-wrap: wrap; /* Items pushed on to next row/column */
-    flex-direction: row; /* Items will go from left to right end of the line */
-    flex-flow: row wrap; /* Combines flex-direction & flex-wrap */
-    /* justify-content:  Define how much space horizontaly between items
+input {
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+  max-height: 100px;
+}
+
+table {
+  width: 400px;
+  /*border-spacing: 40px;*/
+}
+
+th,
+caption {
+  text-align: left;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+table,
+th,
+td {
+  border: 1px solid rgba(10, 10, 10, 0.5);
+  border-collapse: collapse;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #fafafa;
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgba(100, 100, 100, 0.25);
+}
+
+input,
+textarea {
+  outline: none;
+  border: 1px solid #c0c0c0;
+}
+
+input:focus,
+textarea:focus {
+  -webkit-box-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
+  box-shadow: 0 0 4px rgba(255, 0, 0, 0.5); /* x-axis y-axis blur */
+  border: 1px solid rgb(255, 0, 0);
+}
+
+::-webkit-input-placeholder {
+  color: red;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  color: red;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: red;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: red;
+  opacity: 1;
+}
+
+::placeholder {
+  color: red;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: red;
+}
+
+::-ms-input-placeholder {
+  color: red;
+  opacity: 1;
+}
+
+.container {
+  width: 100%;
+  height: 500px;
+  background-color: #c0c0c0;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex; /* Rearrange items in the container */
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; /* Items pushed on to next row/column */
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; /* Items will go from left to right end of the line */
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap; /* Combines flex-direction & flex-wrap */
+  /* HORIZONTAL
+    
+    justify-content:  Define how much space horizontaly between items
     justify-content: center;  Centers items with no space
     justify-content: space-around;  Centers items with spacing but items furthest to the left and right have half spacing
     justify-content: space-between;  Centers items with equal spacing only between items
@@ -216,7 +317,54 @@ main {
     justify-content: flex-start;
     justify-content: space-evenly; All items are evenly spaced
     */
-    justify-content: space-between;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  /* align-items:  Defines how items are positioned on the line */
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  /* align-items: flex-end;  All items are pushed to the bottom of lines
+    align-items: center;  All items are centered within the box-lines
+    align-items: stretch;  Divs are stretched to take up all available space
+    align-items: baseline;  All items are centered horizontaly on the line regardless of individual height
+
+    VERTICAL
+
+    align-content: center;  All items are centered in the container as much as possible
+    align-content: space-around;  All items have the same space at top and bottom in each line
+    */
+  -ms-flex-line-pack: justify;
+  align-content: space-between; /* All items are spaced as far apart as possible */
+}
+
+.item {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.item2 {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.item3 {
+  background-color: red;
+  /* flex-grow: 1;
+  flex-shrink: 1;  Does the opposite of flex-grow */
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+}
+
+.item4 {
+  background-color: green;
+  /* flex-grow: 2;  This item has twice as much space after it 
+  flex-basis: 60%; */
+  -webkit-box-flex: 0;
+  -ms-flex: 0 /* grow */ 1 /* shrink */ 100px;
+  flex: 0 /* grow */ 1 /* shrink */ 100px; /* basis */
 }
 
 /* HEADER */
@@ -254,12 +402,12 @@ header nav ul li {
   display: inline-block;
   float: left;
   list-style: none;
-  padding: 0 16px;
+  padding: 0 15px;
 }
 
 header nav ul li a {
   font-family: Catamaran;
-  font-size: 16px;
+  font-size: 15px;
   color: #0f0f0f;
   text-transform: uppercase;
 }
@@ -327,6 +475,7 @@ header .head-cases {
   color: #fff;
   text-align: center;
   text-shadow: 2px 2px 8px #050505;
+  z-index: 1;
 }
 
 .index-banner h2 {
@@ -338,6 +487,7 @@ header .head-cases {
   color: #fff;
   text-align: center;
   text-shadow: 2px 2px 8px #050505;
+  z-index: 1;
 }
 
 .index-links div {
@@ -521,6 +671,117 @@ main h2 {
   -moz-column-gap: 30px;
   column-gap: 30px;
   padding: 30px 0;
+}
+
+/* GALLERY */
+
+.gallery-links-h2 {
+  font-family: Catamaran;
+  font-size: 28px;
+  font-weight: 500;
+  color: #0f0f0f;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px;
+}
+
+.gallery-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+/* Method 1
+.gallery-img {
+  flex-basis: 23%;
+  margin: 10px;
+}
+
+.gallery-img {
+  width: 100%;
+}
+*/
+
+/* Method 2 */
+.gallery-img {
+  -ms-flex-preferred-size: 90%;
+  flex-basis: 90%;
+  margin: 10px;
+}
+
+.gallery-img {
+  width: 100%;
+}
+
+@media screen and (min-width: 762px) {
+  .gallery-links-h2 {
+    font-size: 28px;
+  }
+
+  .gallery-img {
+    -ms-flex-preferred-size: 300px;
+    flex-basis: 300px;
+  }
+}
+
+.move-me {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  position: relative; /* Will move box relative to its original location */
+  top: 100px; /* Move box downwards 100px from the top */
+}
+
+.move-me2 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  /* Trigger something to appear somewhere else on the page */
+  position: absolute; /* Will move box to a position regardless of its 
+  position in the document */
+  top: 0px; /* Move box to the top right of the page */
+  right: 0px;
+}
+
+.move-me3 {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  position: fixed; /* Will move box to a position regardless of its position 
+  in the document and ignores its parent container positioning */
+  top: 100px; /* Move box to the top right of the page */
+  right: 0px;
+}
+
+.move-me4 {
+  width: 100%;
+  height: 100px;
+  background-color: yellow;
+  position: -webkit-sticky;
+  position: sticky; /* When in viewport this element sticks to the viewport 
+  regardless of scrolling */
+  top: 100px; /* This element will stay in the viewport 100px from the top */
+}
+
+.section-1 {
+  width: 100%;
+  height: 400px;
+  background-color: #ccc;
+  z-index: 100;
+}
+
+.section-2 {
+  width: 50%;
+  height: 1400px;
+  background-color: #aaa;
+  position: relative; /* .move-me2 box now stays within its container */
 }
 
 /* FOOTER */
