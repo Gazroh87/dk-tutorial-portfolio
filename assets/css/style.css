@@ -181,6 +181,35 @@ select {
 * Browsers: last 4 version
 */
 
+:root {
+  --text-color: #c0c0c0;
+  --border: solid 1px #111;
+}
+
+:hover {
+  color: red;
+}
+
+h1:hover {
+  color: red;
+  padding-left: 50px;
+  font-size: 30px;
+}
+
+a:active,
+a:visited {
+  color: green;
+}
+
+.list-example-1 p:last-child {
+  color: blue;
+}
+
+.list-example-2 p:nth-child(2n + 0) {
+  /* every second paragraph starting from the first(0) / (even) / (odd) */
+  color: pink;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -377,6 +406,7 @@ header {
   background-color: #fff;
   width: 100%;
   height: 100px;
+  z-index: 1000; /* 4th/Top layer */
 }
 
 header .head-brand {
@@ -475,7 +505,7 @@ header .head-cases {
   color: #fff;
   text-align: center;
   text-shadow: 2px 2px 8px #050505;
-  z-index: 1;
+  z-index: 10; /* 2nd layer */
 }
 
 .index-banner h2 {
@@ -487,7 +517,7 @@ header .head-cases {
   color: #fff;
   text-align: center;
   text-shadow: 2px 2px 8px #050505;
-  z-index: 1;
+  z-index: 10; /* 2nd layer */
 }
 
 .index-links div {
@@ -541,10 +571,85 @@ header .head-cases {
   text-align: center;
 }
 
+.section-one {
+  --test: 10px;
+  --text-size: 14px;
+}
+
+.textbox {
+  --test: 20px;
+}
+
+.section-one p {
+  color: var(--text-color);
+  font-size: var(--text-size);
+}
+
+.section-two p {
+  color: var(--text-color);
+}
+
+.img-test {
+  width: 500px;
+  height: 500px;
+  background-image: url("../img/logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: .5s; */
+
+  transition: all 2s ease-in-out 0.5s;
+}
+
+.img-test:hover {
+  background-image: url("../img/logo-hover.png");
+}
+
+.button-test {
+  display: block;
+  width: 128px;
+  height: 60px;
+  padding-left: 20px;
+  background-color: lightblue;
+  font-size: 20px;
+  font-family: arial;
+  font-weight: 600;
+  color: #222;
+  line-height: 60px;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.button-test:hover {
+  width: 170px;
+  height: 300px;
+  padding-left: 500px;
+  background-color: red;
+}
+
+.button-test span {
+  padding-left: 30px;
+  color: white;
+  font-weight: 900;
+}
+
 @media screen and (min-width: 1000px) {
   .wrapper {
     width: calc(1000px + 16.66666666666667vw);
     margin: 0 auto;
+    position: relative;
+  }
+
+  .footer-wrapper {
+    width: calc(1000px + 16.66666666666667vw);
+    margin: 0 auto;
+    position: relative;
   }
 
   .index-banner {
@@ -586,6 +691,10 @@ header .head-cases {
   .index-links div h3 {
     font-size: calc(30px + 0.5vw);
     line-height: 225px;
+  }
+
+  .transitions {
+    padding-bottom: 300px;
   }
 }
 
@@ -774,7 +883,7 @@ main h2 {
   width: 100%;
   height: 400px;
   background-color: #ccc;
-  z-index: 100;
+  z-index: 100; /* 3rd layer */
 }
 
 .section-2 {
@@ -787,10 +896,11 @@ main h2 {
 /* FOOTER */
 
 footer {
-  width: calc(100% - 80px);
+  width: calc(920px + 16.66666666666667vw);
   padding: 40px 40px;
   background-color: #050505;
   overflow: hidden;
+  z-index: 1000; /* 4th/Top layer */
 }
 
 footer ul {
@@ -829,6 +939,21 @@ footer ul li a {
 }
 
 @media screen and (min-width: 1000px) {
+  .whitespace { /* Should use border-top on footer instead */
+    height: 20px;
+    width: calc(1000px + 16.66666666666667vw);
+    background-color: #fafafa;
+    position: fixed;
+    bottom: 280px;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+  }
+  .footer-absolute {
+    position: absolute;
+  }
+
   .footer-links-projects {
     display: block;
   }
@@ -852,4 +977,29 @@ footer ul li a {
   .footer-links-projects {
     margin-left: 20px;
   }
+}
+
+/* Pseudo Elements */
+
+.element-1::first-line {
+  background-color: yellow;
+  color: red;
+}
+
+.element-2::first-letter {
+  background-color: green;
+  color: white;
+}
+
+.element-3::selection {
+  background-color: green;
+  color: blue;
+}
+
+.element-4::before {
+  content: attr(href) " - This is a paragraph -";
+}
+
+.element-5::before {
+  content: url("../img/galleryimg.jpg");
 }
