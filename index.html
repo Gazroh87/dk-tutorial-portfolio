@@ -10,6 +10,7 @@
     <meta name="keywords" content="coding, tutorials, html, css" />
     <meta name="author" content="Gary Hughes" />
     <title>Home</title>
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
@@ -27,7 +28,14 @@
       <nav class="nav-main">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
+          <li>
+            <a href="portfolio.html">Portfolio</a>
+            <ul class="dropdown">
+              <li><a href="#">Digital Art</a></li>
+              <li><a href="#">Video Production</a></li>
+              <li><a href="#">Web Development</a></li>
+            </ul>
+          </li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -82,200 +90,207 @@
             </div></a
           >
         </section>
-    <form action="" method="post">
-      <!-- POST for sensitive/GET for non-sensitive -->
-      <input
-        type="text"
-        name="email"
-        placeholder="Enter your email address here"
-      />
-      <input type="text" name="email" value="@" />
-      Male: <input type="radio" name="gender" value="Male" /> Female:
-      <input type="radio" name="gender" value="Female" /> Other:
-      <input type="radio" name="gender" value="Other" checked />
-      <input type="password" name="pwd" placeholder="Password" />
-      <textarea
-        name="message"
-        placeholder="Write a message!"
-        id=""
-        cols="30"
-        rows="10"
-      ></textarea>
-      <select name="car">
-        <option value="none">None</option>
-        <option value="car1">Ford</option>
-        <option value="car2">Mercedes</option>
-        <option value="car3">Opel</option>
-      </select>
-      <!-- <input type="submit" name="submit" value="Submit" /> -->
-      <button type="submit" name="submit">Submit</button>
-    </form>
-    <table>
-      <caption>
-        Names list!
-      </caption>
-      <thead>
-        <tr>
-          <th>First name:</th>
-          <th>Last name:</th>
-          <th>Gender:</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Daniel</td>
-          <td>Nielsen</td>
-          <td>Male</td>
-        </tr>
-        <tr>
-          <td>Jane</td>
-          <td>Doe</td>
-          <td>Female</td>
-        </tr>
-      </tbody>
-    </table>
-    <section class="section-1"></section>
-    <section class="section-2">
-      <div class="move-me"></div>
-      <div class="move-me2"></div>
-      <div class="move-me3"></div>
-      <div class="move-me4"></div>
-    </section>
-    <section class="container">
-      <div class="item">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac risus
-          accumsan sem rutrum tincidunt a.
-        </p>
-      </div>
-      <div class="item">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac risus
-          accumsan sem rutrum tincidunt a.
-        </p>
-      </div>
-      <div class="item">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac risus
-          accumsan sem rutrum tincidunt a.
-        </p>
-      </div>
-      <div class="item">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac risus
-          accumsan sem rutrum tincidunt a.
-        </p>
-      </div>
-      <div class="item2">
-        <p>
-          HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
-          risus accumsan sem rutrum tincidunt a.
-        </p>
-      </div>
-      <div class="item">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac risus
-          accumsan sem rutrum tincidunt a.
-        </p>
-      </div>
-    </section>
-    <section class="container">
-      <div class="item3">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac risus
-          accumsan sem rutrum tincidunt a.
-        </p>
-      </div>
-      <div class="item3">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac risus
-          accumsan sem rutrum tincidunt a.
-        </p>
-      </div>
-      <div class="item3">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac risus
-          accumsan sem rutrum tincidunt a.
-        </p>
-      </div>
-      <div class="item3">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac risus
-          accumsan sem rutrum tincidunt a.
-        </p>
-      </div>
-      <div class="item4">
-        <p>
-          HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
-          risus accumsan sem rutrum tincidunt a.
-        </p>
-      </div>
-      <div class="item3">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac risus
-          accumsan sem rutrum tincidunt a.
-        </p>
-      </div>
-    </section>
-    <section class="section-one">
-      <h2>This is a title</h2>
-      <p>This is a paragraph</p>
-      <div class="textbox">
-        <p>Text</p>
-      </div>
-    </section>
-    <div class="list-example-1">
-      <p>Paragraph 1</p>
-      <p>Paragraph 2</p>
-      <p>Paragraph 3</p>
-    </div>
-    <br />
-    <div class="list-example-2">
-      <p>Paragraph 1</p>
-      <p>Paragraph 2</p>
-      <p>Paragraph 3</p>
-      <p>Paragraph 4</p>
-    </div>
-    <p class="element-1">Paragraph 1</p>
-    <p class="element-2">Paragraph 2</p>
-    <p class="element-3">Paragraph 3</p>
-    <p class="element-4" href="index.html">- Paragraph 4</p>
-    <p class="element-5" href="index.html">- Paragraph 5</p>
-    <br />
-    <div class="transitions">
-    <!-- Example 1 -->
-    <div class="img-test"></div>
-    <br /><br />
-    <!-- Example 2 -->
-    <a href="index.html" class="button-test">Read more!<span>v</span></a>
-    </div>
-    </main>
+        <form action="" method="post">
+          <!-- POST for sensitive/GET for non-sensitive -->
+          <input
+            type="text"
+            name="email"
+            placeholder="Enter your email address here"
+          />
+          <input type="text" name="email" value="@" />
+          Male: <input type="radio" name="gender" value="Male" /> Female:
+          <input type="radio" name="gender" value="Female" /> Other:
+          <input type="radio" name="gender" value="Other" checked />
+          <input type="password" name="pwd" placeholder="Password" />
+          <textarea
+            name="message"
+            placeholder="Write a message!"
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+          <select name="car">
+            <option value="none">None</option>
+            <option value="car1">Ford</option>
+            <option value="car2">Mercedes</option>
+            <option value="car3">Opel</option>
+          </select>
+          <!-- <input type="submit" name="submit" value="Submit" /> -->
+          <button type="submit" name="submit">Submit</button>
+        </form>
+        <table>
+          <caption>
+            Names list!
+          </caption>
+          <thead>
+            <tr>
+              <th>First name:</th>
+              <th>Last name:</th>
+              <th>Gender:</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Daniel</td>
+              <td>Nielsen</td>
+              <td>Male</td>
+            </tr>
+            <tr>
+              <td>Jane</td>
+              <td>Doe</td>
+              <td>Female</td>
+            </tr>
+          </tbody>
+        </table>
+        <section class="section-1"></section>
+        <section class="section-2">
+          <div class="move-me"></div>
+          <div class="move-me2"></div>
+          <div class="move-me3"></div>
+          <div class="move-me4"></div>
+        </section>
+        <section class="container">
+          <div class="item">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
+              risus accumsan sem rutrum tincidunt a.
+            </p>
+          </div>
+          <div class="item">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
+              risus accumsan sem rutrum tincidunt a.
+            </p>
+          </div>
+          <div class="item">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
+              risus accumsan sem rutrum tincidunt a.
+            </p>
+          </div>
+          <div class="item">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
+              risus accumsan sem rutrum tincidunt a.
+            </p>
+          </div>
+          <div class="item2">
+            <p>
+              HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+              ac risus accumsan sem rutrum tincidunt a.
+            </p>
+          </div>
+          <div class="item">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
+              risus accumsan sem rutrum tincidunt a.
+            </p>
+          </div>
+        </section>
+        <section class="container">
+          <div class="item3">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
+              risus accumsan sem rutrum tincidunt a.
+            </p>
+          </div>
+          <div class="item3">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
+              risus accumsan sem rutrum tincidunt a.
+            </p>
+          </div>
+          <div class="item3">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
+              risus accumsan sem rutrum tincidunt a.
+            </p>
+          </div>
+          <div class="item3">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
+              risus accumsan sem rutrum tincidunt a.
+            </p>
+          </div>
+          <div class="item4">
+            <p>
+              HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+              ac risus accumsan sem rutrum tincidunt a.
+            </p>
+          </div>
+          <div class="item3">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
+              risus accumsan sem rutrum tincidunt a.
+            </p>
+          </div>
+        </section>
+        <section class="section-one">
+          <h2>This is a title</h2>
+          <p>This is a paragraph</p>
+          <div class="textbox">
+            <p>Text</p>
+          </div>
+        </section>
+        <div class="list-example-1">
+          <p>Paragraph 1</p>
+          <p>Paragraph 2</p>
+          <p>Paragraph 3</p>
+        </div>
+        <br />
+        <div class="list-example-2">
+          <p>Paragraph 1</p>
+          <p>Paragraph 2</p>
+          <p>Paragraph 3</p>
+          <p>Paragraph 4</p>
+        </div>
+        <p class="element-1">Paragraph 1</p>
+        <p class="element-2">Paragraph 2</p>
+        <p class="element-3">Paragraph 3</p>
+        <p class="element-4" href="index.html">- Paragraph 4</p>
+        <p class="element-5" href="index.html">- Paragraph 5</p>
+        <br />
+        <div class="grid">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+        </div>
+        <div class="transitions">
+          <!-- Example 1 -->
+          <div class="img-test"></div>
+          <br /><br />
+          <!-- Example 2 -->
+          <a href="index.html" class="button-test">Read more!<span>v</span></a>
+        </div>
+      </main>
     </div>
     <div class="footer-wrapper">
-    <div class="footer-absolute">
-    <div class="whitespace"></div>
-      <footer>
-        <ul class="footer-links-main">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="about.html">About Me</a></li>
-          <li><a href="contacts.html">Contacts</a></li>
-        </ul>
-        <ul class="footer-links-projects">
-          <li><p>Latest Projects</p></li>
-          <li><a href="#">Project 1</a></li>
-          <li><a href="#">Project 2</a></li>
-          <li><a href="#">Project 3</a></li>
-          <li><a href="#">Project 4</a></li>
-        </ul>
-        <div class="footer-sm-links">
-          <a href="#"><i class="fab fa-youtube-square"></i></a>
-          <a href="#"><i class="fab fa-twitter-square"></i></a>
-          <a href="#"><i class="fab fa-instagram-square"></i></a>
-          <a href="#"><i class="fab fa-meetup"></i></a>
-        </div>
-      </footer>
+      <div class="footer-absolute">
+        <div class="whitespace"></div>
+        <footer>
+          <ul class="footer-links-main">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+          </ul>
+          <ul class="footer-links-projects">
+            <li><p>Latest Projects</p></li>
+            <li><a href="#">Project 1</a></li>
+            <li><a href="#">Project 2</a></li>
+            <li><a href="#">Project 3</a></li>
+            <li><a href="#">Project 4</a></li>
+          </ul>
+          <div class="footer-sm-links">
+            <a href="#"><i class="fab fa-youtube-square"></i></a>
+            <a href="#"><i class="fab fa-twitter-square"></i></a>
+            <a href="#"><i class="fab fa-instagram-square"></i></a>
+            <a href="#"><i class="fab fa-meetup"></i></a>
+          </div>
+        </footer>
       </div>
     </div>
   </body>
